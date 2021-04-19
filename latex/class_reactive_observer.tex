@@ -1,0 +1,58 @@
+\hypertarget{class_reactive_observer}{}\doxysection{Reactive\+Observer$<$ T $>$ Class Template Reference}
+\label{class_reactive_observer}\index{ReactiveObserver$<$ T $>$@{ReactiveObserver$<$ T $>$}}
+Inheritance diagram for Reactive\+Observer$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_reactive_observer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_reactive_observer_a6a3d829a014498c44ab793e0ba814eb3}{Reactive\+Observer}} (Action$<$ T $>$ \+\_\+action)
+\item 
+void \mbox{\hyperlink{class_reactive_observer_a6aee00614632d3a3a994a6a0fc23c620}{Subject\+Change}} (\mbox{\hyperlink{interface_i_subject}{ISubject}}$<$ T $>$ subject)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of \mbox{\hyperlink{interface_i_observer}{IObserver}} interface Observer gets notification about changes in subject it is attached to \begin{DoxyAuthor}{Author}
+Antti Paavola 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_reactive_observer_a6a3d829a014498c44ab793e0ba814eb3}\label{class_reactive_observer_a6a3d829a014498c44ab793e0ba814eb3}} 
+\index{ReactiveObserver$<$ T $>$@{ReactiveObserver$<$ T $>$}!ReactiveObserver@{ReactiveObserver}}
+\index{ReactiveObserver@{ReactiveObserver}!ReactiveObserver$<$ T $>$@{ReactiveObserver$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ReactiveObserver()}{ReactiveObserver()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_reactive_observer}{Reactive\+Observer}}$<$ T $>$.\mbox{\hyperlink{class_reactive_observer}{Reactive\+Observer}} (\begin{DoxyParamCaption}\item[{Action$<$ T $>$}]{\+\_\+action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set action to execute 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+action} & action to set\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_reactive_observer_a6aee00614632d3a3a994a6a0fc23c620}\label{class_reactive_observer_a6aee00614632d3a3a994a6a0fc23c620}} 
+\index{ReactiveObserver$<$ T $>$@{ReactiveObserver$<$ T $>$}!SubjectChange@{SubjectChange}}
+\index{SubjectChange@{SubjectChange}!ReactiveObserver$<$ T $>$@{ReactiveObserver$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SubjectChange()}{SubjectChange()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_reactive_observer}{Reactive\+Observer}}$<$ T $>$.Subject\+Change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_i_subject}{ISubject}}$<$ T $>$}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Receive update of changes in given subject Execute action on subject change 
+\begin{DoxyParams}{Parameters}
+{\em subject} & subject affiliated with this action\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_i_observer_a0b4bf4bc6c691bc25458cba41f2b7fdd}{IObserver$<$ T $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+R\+:/\+Javadoc\+\_\+\+Riku\+\_\+\+Peltola/Reactive\+Observer.\+cs\end{DoxyCompactItemize}

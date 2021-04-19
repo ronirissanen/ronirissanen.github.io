@@ -1,0 +1,77 @@
+\hypertarget{class_ai_unit}{}\doxysection{Ai\+Unit Class Reference}
+\label{class_ai_unit}\index{AiUnit@{AiUnit}}
+Inheritance diagram for Ai\+Unit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_ai_unit}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_ai_unit_a6976dd421be71304aded1f936e685f56}{Unit\+Deployed}} ()
+\item 
+void \mbox{\hyperlink{class_ai_unit_ace8c2c040317c2c81ea88e490ec5ae62}{Set\+Destination}} (Vector3 \+\_\+destination)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_ai_unit_aa75e0e54e93235a3893bf1053e2e622d}{Start}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Nav\+Mesh\+Agent \mbox{\hyperlink{class_ai_unit_a0573d6949021d254b9c20f3a4c980c24}{agent}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class handles unit movement \begin{DoxyAuthor}{Author}
+Roni Rissanen 
+
+Riku Peltola 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ai_unit_ace8c2c040317c2c81ea88e490ec5ae62}\label{class_ai_unit_ace8c2c040317c2c81ea88e490ec5ae62}} 
+\index{AiUnit@{AiUnit}!SetDestination@{SetDestination}}
+\index{SetDestination@{SetDestination}!AiUnit@{AiUnit}}
+\doxysubsubsection{\texorpdfstring{SetDestination()}{SetDestination()}}
+{\footnotesize\ttfamily void Ai\+Unit.\+Set\+Destination (\begin{DoxyParamCaption}\item[{Vector3}]{\+\_\+destination }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the destination.\mbox{\Hypertarget{class_ai_unit_aa75e0e54e93235a3893bf1053e2e622d}\label{class_ai_unit_aa75e0e54e93235a3893bf1053e2e622d}} 
+\index{AiUnit@{AiUnit}!Start@{Start}}
+\index{Start@{Start}!AiUnit@{AiUnit}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily override void Ai\+Unit.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Calls start from inherited base and sets the nav mesh agent for the unit.
+
+Reimplemented from \mbox{\hyperlink{class_unit_a7ea0d7bc9200a52ac775dd21c96d5522}{Unit}}.
+
+\mbox{\Hypertarget{class_ai_unit_a6976dd421be71304aded1f936e685f56}\label{class_ai_unit_a6976dd421be71304aded1f936e685f56}} 
+\index{AiUnit@{AiUnit}!UnitDeployed@{UnitDeployed}}
+\index{UnitDeployed@{UnitDeployed}!AiUnit@{AiUnit}}
+\doxysubsubsection{\texorpdfstring{UnitDeployed()}{UnitDeployed()}}
+{\footnotesize\ttfamily override void Ai\+Unit.\+Unit\+Deployed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Calls inherited unit deployed, moves the unit by in a random direction.
+
+Reimplemented from \mbox{\hyperlink{class_unit}{Unit}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_ai_unit_a0573d6949021d254b9c20f3a4c980c24}\label{class_ai_unit_a0573d6949021d254b9c20f3a4c980c24}} 
+\index{AiUnit@{AiUnit}!agent@{agent}}
+\index{agent@{agent}!AiUnit@{AiUnit}}
+\doxysubsubsection{\texorpdfstring{agent}{agent}}
+{\footnotesize\ttfamily Nav\+Mesh\+Agent Ai\+Unit.\+agent\hspace{0.3cm}{\ttfamily [protected]}}
+
+Nav mesh agen for the unit 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+R\+:/\+Javadoc\+\_\+\+Riku\+\_\+\+Peltola/AIUnit.\+cs\end{DoxyCompactItemize}

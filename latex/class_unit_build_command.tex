@@ -1,0 +1,76 @@
+\hypertarget{class_unit_build_command}{}\doxysection{Unit\+Build\+Command Class Reference}
+\label{class_unit_build_command}\index{UnitBuildCommand@{UnitBuildCommand}}
+Inheritance diagram for Unit\+Build\+Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unit_build_command}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unit_build_command_a95a611b972d55745d071d12f8c346701}{Execute}} ()
+\item 
+void \mbox{\hyperlink{class_unit_build_command_a46bd379a9c8854a0fec21f16f54daa68}{Un\+Execute}} ()
+\item 
+\mbox{\hyperlink{class_unit_build_command_a81f5ac8d63c780f98e328ee466643006}{Unit\+Build\+Command}} (\mbox{\hyperlink{class_unit_factory}{Unit\+Factory}}$<$ \mbox{\hyperlink{class_building_unit}{Building\+Unit}} $>$ \+\_\+building\+Factory, \mbox{\hyperlink{class_unit_factory}{Unit\+Factory}}$<$ \mbox{\hyperlink{class_ai_unit}{Ai\+Unit}} $>$ \+\_\+ai\+Unit\+Factory, string \+\_\+type, Game\+Object \+\_\+go, \mbox{\hyperlink{class_unit_specs_s_o}{Unit\+Specs\+SO}} \+\_\+unit\+Specs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unit}{Unit}} \mbox{\hyperlink{class_unit_build_command_a0b1121f70a4fcbf8a592c7a6427351e3}{Builded\+Unit}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxysubsubsection*{Build units}
+
+This class handles unit building commands and it implements \mbox{\hyperlink{interface_i_command}{ICommand}} interface \begin{DoxyAuthor}{Author}
+Antti Paavola 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unit_build_command_a81f5ac8d63c780f98e328ee466643006}\label{class_unit_build_command_a81f5ac8d63c780f98e328ee466643006}} 
+\index{UnitBuildCommand@{UnitBuildCommand}!UnitBuildCommand@{UnitBuildCommand}}
+\index{UnitBuildCommand@{UnitBuildCommand}!UnitBuildCommand@{UnitBuildCommand}}
+\doxysubsubsection{\texorpdfstring{UnitBuildCommand()}{UnitBuildCommand()}}
+{\footnotesize\ttfamily Unit\+Build\+Command.\+Unit\+Build\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unit_factory}{Unit\+Factory}}$<$ \mbox{\hyperlink{class_building_unit}{Building\+Unit}} $>$}]{\+\_\+building\+Factory,  }\item[{\mbox{\hyperlink{class_unit_factory}{Unit\+Factory}}$<$ \mbox{\hyperlink{class_ai_unit}{Ai\+Unit}} $>$}]{\+\_\+ai\+Unit\+Factory,  }\item[{string}]{\+\_\+type,  }\item[{Game\+Object}]{\+\_\+go,  }\item[{\mbox{\hyperlink{class_unit_specs_s_o}{Unit\+Specs\+SO}}}]{\+\_\+unit\+Specs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method gives values to to this classes member variables
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unit_build_command_a95a611b972d55745d071d12f8c346701}\label{class_unit_build_command_a95a611b972d55745d071d12f8c346701}} 
+\index{UnitBuildCommand@{UnitBuildCommand}!Execute@{Execute}}
+\index{Execute@{Execute}!UnitBuildCommand@{UnitBuildCommand}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily void Unit\+Build\+Command.\+Execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Execute command This method executes given command and gives calls \mbox{\hyperlink{class_unit_factory}{Unit\+Factory}}\textquotesingle{}s Build\+Unit-\/method with unit type and it\textquotesingle{}s specs Also reduce\textquotesingle{}s player\textquotesingle{}s \char`\"{}spice\char`\"{} whics acts as money in this game
+
+Implements \mbox{\hyperlink{interface_i_command_a5570fc3b8349f52ec417acbfac5dc44e}{ICommand}}.
+
+\mbox{\Hypertarget{class_unit_build_command_a46bd379a9c8854a0fec21f16f54daa68}\label{class_unit_build_command_a46bd379a9c8854a0fec21f16f54daa68}} 
+\index{UnitBuildCommand@{UnitBuildCommand}!UnExecute@{UnExecute}}
+\index{UnExecute@{UnExecute}!UnitBuildCommand@{UnitBuildCommand}}
+\doxysubsubsection{\texorpdfstring{UnExecute()}{UnExecute()}}
+{\footnotesize\ttfamily void Unit\+Build\+Command.\+Un\+Execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Unexecute executed command Method destroys builded unit and refunds spice
+
+Implements \mbox{\hyperlink{interface_i_command_a47c6a2d9865266036c179f8cf29b9673}{ICommand}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_unit_build_command_a0b1121f70a4fcbf8a592c7a6427351e3}\label{class_unit_build_command_a0b1121f70a4fcbf8a592c7a6427351e3}} 
+\index{UnitBuildCommand@{UnitBuildCommand}!BuildedUnit@{BuildedUnit}}
+\index{BuildedUnit@{BuildedUnit}!UnitBuildCommand@{UnitBuildCommand}}
+\doxysubsubsection{\texorpdfstring{BuildedUnit}{BuildedUnit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unit}{Unit}} Unit\+Build\+Command.\+Builded\+Unit}
+
+The unit to be build 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+R\+:/\+Javadoc\+\_\+\+Riku\+\_\+\+Peltola/Unit\+Build\+Command.\+cs\end{DoxyCompactItemize}
