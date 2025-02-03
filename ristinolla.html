@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <!-- page title -->
+    <title>Ronin portfolio</title>
+
+    <!-- meta information -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="description" content="Ronin portfolio">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="author" content="Roni">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="header_content">
+            <h1>Roni Rissanen</h1>
+            <div class="upsidedown">
+                <div class="mirror">
+                    <h1>Roni Rissanen</h1>
+                </div>
+            </div>
+
+        </div>
+        <div class="header_links">
+            <div class="inactive"><a href="index.html"><b>Chronological</b></a></div>
+            <div class="active"><a href="ristinolla.html"><b>Ristinolla</b></a></div>
+            <div class="inactive"><a href="suika.html"><b>Suika</b></a></div>
+
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="main_content">
+
+
+
+            <div class="content">
+
+                <div class="article">
+                    <h3>Video</h3>
+                    <div class="line"></div>
+                    <div class="video_container">
+                        <iframe src="https://www.youtube.com/embed/6w4j7Ef-hPg" frameborder="0" allowfullscreen
+                            class="video"></iframe>
+                    </div>
+                </div>
+
+                <div class="article">
+                    <h3>Projektin aloitus</h3>
+                    <div class="line"></div>
+
+                    <div class="text">
+                        <p>
+                            Netissä ei ole viisi merkkiä putkeen vaativaa ristinollaa loputtomalla areenalla.
+                            Tarkoituksenani on vähitellen kehittää peli näillä spekseillä. Ensimmäinen tavoite on jonkin
+                            näköinen tietorakenne ruudukolle ja instantioida ruudut näkyviin. Toinen tavoite on pelin
+                            päättävä algoritmi. Milloin on viisi samaa symbolia putkeen. Kolmas tavoite on netwörkkäys.
+                            Aloitan todennäköisesti projektin alusta, kun pelin peruslogiikka toimii.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="article">
+                    <h3>Peruslogiikka - Ensimmäinen väliraportti</h3>
+                    <div class="line"></div>
+
+                    <div class="text">
+                        <p>
+                            <img src="images/coords.png" alt="Koordinaatti struct." width="512" height="512">
+                            Tietorakenteen muodostin luomalla structin koodinaatteja varten ja enumin ruudun tilaa
+                            varten. Nämä dictionaryyn ja saadaan ruudun paikka ja tila tallennettua. Gridmanagerissa
+                            klassinen kaksi sisäkkäistä for-looppia ratkaisu täytää tiedot ja instantio ruudukon.
+                        </p>
+                        <p>
+                            Pelaaja voi vaikuttaa ruudukon tilaan ampumalla säteitä instantioidun ruudukon
+                            collidereihin. TileWasClicked-funktion palauttaa ruudun sijainnin ja uuden tilan. Tiedot
+                            päivitetään GridManagerille.
+                        </p>
+
+                        <p>
+
+                            Sain yksinkertaisen idean voiton tarkistamiseksi. Voitto voi ilmetä ainoastaan pelaajan
+                            asetettua symbolin ruudukkoon, joten koko ruudukkoa ei tarvitse käydä läpi, vaan ainoastaan
+                            ne ruudut, joihin viimeiseksi asetettu symboli voi luoda viiden symbolin sarjan. Asetettu
+                            ruutu on merkitty kuvaan punaisella, tarkistettavat ruudut on merkitty keltaisella.
+                        </p>
+
+                        <p>
+                            Ensimmäiseksi mieleeni tuli iteroida ruutujen läpi neljän for-loopin kanssa. Yksi looppi
+                            jokaista ‘viivaa’ kohti. Looppi alkaa aina -4:stä ja päättyy +4:än. Ratkaisu ei ole kaunis,
+                            mutta se on yksinkertainen ja toimii. Itse tarkistaminen tapahtuu pitämällä kirjaa
+                            väliaikaisista pisteistä. Aina kun ruudun tila on sama kuin asetetun ruudun, annetaan piste.
+                            Kun se on eri, nollataan pisteet. Viiden pisteen kohdalla voidaan julistaa voittaja. Jos
+                            viisi pistettä ei tule millään loopilla täyteen, peli jatkuu normaalisti.
+
+                        </p>
+                        <img src="images/algoplan.png" alt="Tarkistusalgoritmisuunnitelma." width="282" height="282">
+                    </div>
+                </div>
+
+                <div class="article">
+                    <h3>Netcode for gameobjects - Toinen väliraportti</h3>
+                    <div class="line"></div>
+
+                    <div class="text">
+                        <p>
+                            Halusin palata Peliohjelmointi nyt -kurssilla käytettyyn Netcode For Gameobjects
+                            networking-kirjaston pariin. En kurssilla saanut mitenkään puristettua pääni sisään, miten
+                            sitä käytetään.
+                        </p>
+                        <p>
+                            Kuten muistin, kirjastoa on vaikea käyttää. Otin hieman vauhtia tutoriaalista ja kaikki meni
+                            ihan päin helvettiä. En saanut ensimmäisen kahdentoista tunnin aikana peliä toimimaan.
+                            Kirjaston ServerRPC ja ClientRPC -funktiot eivät vain menneet päähäni. Lopulta päätin
+                            aloittaa alusta ja pyrkiä käyttämään mahdollisimman vähän kyseisiä kirottuja funktioita.
+                            NetworkVariable-muuttuja reittiä pitkin kaikki vaikutti paljon helpommalta, mutta tarvitsin
+                            silti RPC-funktioita pelin viimeistelyyn. Neljän tunnin taistelun jälkeen vihdoin ymmärsin
+                            miten ne toimivat!
+                        </p>
+                        <p>
+                            Koodi pysyi hyvin samankaltaisena pelin offline versiion nähden. Tietyille muuttujille piti
+                            tehdä serialisaatiot, jotta niistä pystyi tehdä NetworkVariable-muuttujia. Joitakin
+                            funktioita kutsutaan RPC-funktioissa, jotta pelin tila synkronisoituu. Kuvassa on päivitetty
+                            koordinaatti struct.
+                        </p>
+                        <img src="images/coords2.png" alt="Uusi koordinaatti struct.">
+                        <p>
+                            Halusin seuraavaksi yhdistää pelaajat palomuurin läpi. Olin jo aiemmin päättänyt haluavani
+                            Among Us tyylisen koodisysteemin peliin. Eli host saa peliltä koodin, jonka hän jakaa
+                            kaverille. Kaveri voi koodilla liittyä hostin lobbyyn. Peli alkaa. Unityllä oli suoraan
+                            valmis ratkaisu tähän, Unity Relay. Kävin opiskelemassa ja kopioimassa pari riviä koodia ja
+                            homma lähti sillä pelittämään. Kannattaa kutsua StartHost-funktiota niin se hosti toimii
+                            paljon paremmin kuin jos sitä unohtaa kutsua.
+                        </p>
+                        <p>
+                            Jatkokehityksenä olisi hyvä tehdä niin että ruudukko on valmiiksi instantioitu. Aiheutan
+                            valtavasti verkkoliikennettä, kun instantioin ~500 NetworkObject-kappaletta aina pelin
+                            alussa.
+                        </p>
+                        <p>
+                            Toinen parantamisen paikka olisi ohjelmoida pelin klikkaukset tapahtumaan clientin puolella.
+                            Tällä hetkellä, jos hostilla ja clientillä on peli-ikkuna eri kuvasuhteilla clientin
+                            klikkaukset menevät ihan minne sattuu. Ongelma on ratkaistu lukitsemalla pelin kuvasuhde.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer">
+            <div class="footer_content">
+                <p>
+                    Roni Rissanen
+                </p>
+                <p>
+                    rissanen.roni@gmail.com
+                </p>
+                <p>
+                    Kotka, Finland
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
